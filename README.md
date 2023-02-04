@@ -4,6 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 I'm learning angular in order to build front end for API Gateway.
 Trying TypeScript for the frst time, components, databindings, string interpolation, styles.
+
 ---
 
 ![image](https://user-images.githubusercontent.com/21973971/216782225-b6107f1b-355f-4b72-9867-0c730d478254.png)
