@@ -1,0 +1,10 @@
+<p>addition works!</p>
+<h3>Add two numbers</h3>
+<input type="text" class="form-control" (input)="onUpdateX($event)" placeholder="Enter a number">
+<input type="text" class="form-control" (input)="onUpdateY($event)" placeholder="Enter a number">
+
+
+
+
+<button class="btn btn-primary" (click)="addNumbers()">Show me the result!</button>
+<p>{{ result }}</p>

@@ -1,0 +1,15 @@
+<p>Server component</p>
+<p>Server with ID {{ serverId }} is {{ serverStatus }}</p>
+<p>Adding 2 + 3 equals to {{ addNumbers(2, 3) }}</p>
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-primary" [disabled]="!allowNewServer">Add server</button>
+  </div>
+</div>
+<p>Allow new server value is {{ allowNewServer }}</p>
+<p [innerText]="allowNewServer"></p>
+
+
+<button class="btn btn-primary" (click)="onCreateServer()">Create server</button>
+<button class="btn btn-primary" (click)="onDisableServer()">Remove server</button>
+<p>{{ serverCreationStatus }}</p>
