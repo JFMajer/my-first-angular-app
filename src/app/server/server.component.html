@@ -1,5 +1,5 @@
 <p>Server component</p>
-<p>Server with ID {{ serverId }} is {{ serverStatus }}</p>
+<p [ngStyle]="{'background-color': getColor()}">Server with ID {{ serverId }} is {{ serverStatus }}</p>
 <p>Adding 2 + 3 equals to {{ addNumbers(2, 3) }}</p>
 <div class="row">
   <div class="col-xs-12">
@@ -14,7 +14,8 @@
 
 <button class="btn btn-primary" (click)="onCreateServer()">Create server</button>
 <button class="btn btn-primary" (click)="onDisableServer()">Remove server</button>
-<p *ngIf="serverCreated">Server was created with a name {{ serverName }}</p>
+<p *ngIf="serverCreated; else noServer">Server was created with a name {{ serverName }}</p>
+<ng-template #noServer><p>No server created</p></ng-template>
 
 <hr>
 <!-- create input field to enter username -->

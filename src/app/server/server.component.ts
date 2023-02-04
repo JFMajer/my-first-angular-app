@@ -12,13 +12,14 @@ export class ServerComponent {
     userName : string = '';
 
     serverId = 10;
-    serverStatus = 'offline';
+    serverStatus = '';
 
     addNumbers(a: number, b: number) {
         return a + b;
     }
 
     constructor() {
+        this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
         setTimeout(() => {
             this.allowNewServer = true;
         }, 2000);
@@ -39,6 +40,10 @@ export class ServerComponent {
 
     isUserNameEmpty() {
         return this.userName === '';
+    }
+
+    getColor() {
+        return this.serverStatus === 'online' ? 'green' : 'red';
     }
 
 
