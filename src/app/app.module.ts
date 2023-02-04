@@ -18,7 +18,8 @@ import { AdditionComponent } from './addition/addition.component';
     AdditionComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

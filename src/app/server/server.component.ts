@@ -7,6 +7,8 @@ import { Component } from "@angular/core";
 export class ServerComponent {
     allowNewServer = false;
     serverCreationStatus = 'No server was created!';
+    serverName : string = 'server 1';
+    userName : string = '';
 
     serverId = 10;
     serverStatus = 'offline';
@@ -22,11 +24,19 @@ export class ServerComponent {
     }
 
     onCreateServer() {
-        this.serverCreationStatus = 'Server was created!';
+        this.serverCreationStatus = 'Server was created with the name ' + this.serverName;
     }
 
     onDisableServer() {
         this.serverCreationStatus = 'Server was removed!';
+    }
+
+    onResetUserName() {
+        this.userName = '';
+    }
+
+    isUserNameEmpty() {
+        return this.userName === '';
     }
 
 

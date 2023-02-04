@@ -8,3 +8,10 @@
 
 <button class="btn btn-primary" (click)="addNumbers()">Show me the result!</button>
 <p>{{ result }}</p>
+
+<h3>Two way data binding</h3>
+<input type="text" class="form-control" [(ngModel)]="someString" placeholder="Enter a string">
+<p>{{ someString }}</p>
+
+
+

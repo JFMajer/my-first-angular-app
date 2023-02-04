@@ -9,7 +9,16 @@
 <p>Allow new server value is {{ allowNewServer }}</p>
 <p [innerText]="allowNewServer"></p>
 
+<p>What should be the server name?</p>
+<input type="text" class="form-control" [(ngModel)]="serverName">
 
 <button class="btn btn-primary" (click)="onCreateServer()">Create server</button>
 <button class="btn btn-primary" (click)="onDisableServer()">Remove server</button>
 <p>{{ serverCreationStatus }}</p>
+
+<hr>
+<!-- create input field to enter username -->
+<p>What is your username?</p>
+<input type="text" class="form-control" [(ngModel)]="userName">
+<p>Your username is {{ userName }}</p>
+<button class="btn btn-primary" (click)="onResetUserName()" [disabled]="isUserNameEmpty()">Reset username</button>

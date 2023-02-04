@@ -10,6 +10,8 @@ export class AdditionComponent {
   y: string;
   result: number;
 
+  someString: string = 'Hello World!';
+
   addNumbers() {
     //convert x and y to numbers and add
     this.result = parseInt(this.x) + parseInt(this.y);
