@@ -1,6 +1,7 @@
-<p>Server component</p>
+<p>Welcome to app server component</p>
+<hr>
 <p [ngStyle]="{'background-color': getColor()}" [ngClass]="{online: serverStatus === 'online'}">Server with ID {{ serverId }} is {{ serverStatus }}</p>
-<p>Adding 2 + 3 equals to {{ addNumbers(2, 3) }}</p>
+
 <div class="row">
   <div class="col-xs-12">
     <button class="btn btn-primary" [disabled]="!allowNewServer">Add server</button>
@@ -23,3 +24,8 @@
 <input type="text" class="form-control" [(ngModel)]="userName">
 <p>Your username is {{ userName }}</p>
 <button class="btn btn-primary" (click)="onResetUserName()" [disabled]="isUserNameEmpty()">Reset username</button>
+
+
+<p>Adding 2 + 3 equals to {{ addNumbers(2, 3) }}</p>
+<p>End of app server component</p>
+<hr>

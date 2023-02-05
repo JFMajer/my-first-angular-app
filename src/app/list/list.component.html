@@ -1,0 +1,15 @@
+<h2>Welcome to list component</h2>
+
+
+<p>What is your username?</p>
+<input type="text" class="form-control" [(ngModel)]="userName">
+<button (click)="addUser()">Add User</button>
+
+<!-- button to show list of users -->
+<button (click)="showUsers()">Show Users</button>
+<button (click)="hideUsers()">Hide Users</button>
+<ul *ngIf="showUsersVar">
+  <li *ngFor="let user of listOfUsers" [ngStyle]="{'background-color': getColor(user.status)}">
+    {{user.name}}
+  </li>
+</ul>
