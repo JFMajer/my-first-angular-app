@@ -1,5 +1,5 @@
 <p>Server component</p>
-<p [ngStyle]="{'background-color': getColor()}">Server with ID {{ serverId }} is {{ serverStatus }}</p>
+<p [ngStyle]="{'background-color': getColor()}" [ngClass]="{online: serverStatus === 'online'}">Server with ID {{ serverId }} is {{ serverStatus }}</p>
 <p>Adding 2 + 3 equals to {{ addNumbers(2, 3) }}</p>
 <div class="row">
   <div class="col-xs-12">
